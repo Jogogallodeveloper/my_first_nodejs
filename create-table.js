@@ -1,12 +1,12 @@
-import { sql } from './db.js'
+import { sql } from "./db.js"
 
 sql`
 CREATE TABLE videos (
-  id serial PRIMARY KEY,
-  title VARCHAR(255) NOT NULL,
+  id text PRIMARY KEY,
+  title text,
   description TEXT,
   duration INTEGER
 );
-` .then(()=> {
+` .then(() => {
   console.log('table created!')
 }) 
